@@ -12,8 +12,8 @@
       <div class="d-flex align-center justify-space-between w-full mt-10">
         <VCard
           class="rounded-xl card-read-shadow mb-4 d-flex align-center justify-center"
-          height="84"
-          width="84"
+          height="80"
+          width="80"
           @click="registerUserGoogle()"
           ><v-icon size="30" color="primary">fa-brands fa-google</v-icon></VCard
         >
