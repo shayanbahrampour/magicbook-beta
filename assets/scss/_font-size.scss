@@ -1,0 +1,9 @@
+@for $i from 9 through 40 {
+  .f-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+.f-50 {
+  font-size: 50px !important;
+}

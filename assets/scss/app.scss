@@ -1,0 +1,191 @@
+@import 'mixins';
+@import 'fonts';
+@import 'z-index';
+@import 'font-size';
+@import 'overwrite';
+@import 'fontawesome/scss/fontawesome';
+@import 'fontawesome/scss/solid';
+@import 'fontawesome/scss/_duotone-icons';
+@import 'fontawesome/scss/duotone';
+@import 'fontawesome/scss/regular';
+@import 'fontawesome/scss/light';
+@import 'fontawesome/scss/thin';
+@import 'fontawesome/scss/brands';
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.text-justify-center {
+  text-align: justify;
+  text-align-last: center;
+
+  input {
+    text-align: center;
+  }
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.start-0 {
+  right: 0;
+}
+
+.end-0 {
+  left: 0;
+}
+
+.latin {
+  font-family: 'roboto', 'iranSans', sans-serif, serif !important;
+}
+
+.latin-input {
+  input {
+    direction: ltr;
+    text-align: right;
+    font-family: 'roboto', sans-serif, serif !important;
+  }
+}
+
+.ltr-input {
+  input {
+    direction: ltr;
+  }
+}
+
+.card-box-shadow {
+  box-shadow: 0 17px 13px -13px rgba(204, 219, 243, 0.9) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.btn-box-shadow:not(.v-btn--loading):not(.v-btn--disabled) {
+  box-shadow: 0 3px 7px 0 rgba(17, 27, 43, 0.47) !important;
+}
+
+.border-shadow-blue {
+  border: 5px solid var(--v-secondary-base) !important;
+  box-shadow: 0 3px 9px 0 rgba(86, 138, 215, 1);
+}
+
+.blue-input-wrapper {
+  border-right-width: 2px;
+  border-right-style: solid;
+  transition: border ease-in 0.2s;
+
+  &.border-primary {
+    border-right-color: var(--v-secondary-base);
+  }
+
+  &.border-warning {
+    border-right-color: var(--v-warning-base);
+  }
+
+  &.border-error {
+    border-right-color: var(--v-error-base);
+  }
+
+  .v-text-field > .v-input__control > .v-input__slot:before,
+  .v-text-field > .v-input__control > .v-input__slot:after {
+    border-color: #dde7f7 !important;
+  }
+
+  input {
+    color: var(--v-secondary-base) !important;
+  }
+
+  .v-text-field__suffix {
+    font-size: 12px;
+    color: var(--v-lightBlue-base) !important;
+  }
+}
+
+.auth-btn {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 24px 24px;
+}
+
+.auth-input .v-input__slot {
+  border: 1px solid rgba(187, 208, 239, 1) !important;
+}
+
+.tab-primary {
+  box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.19);
+
+  .v-tabs-bar {
+    background-color: var(--v-primary-base) !important;
+
+    .v-tab:not(.v-tab--active) {
+      color: white !important;
+    }
+
+    .active-tab {
+      border-width: 3px !important;
+      border-style: solid !important;
+      border-color: var(--v-primary-base) !important;
+      color: var(--v-primary-base) !important;
+    }
+  }
+}
+
+.fixed-bottom-btn {
+  bottom: 24px;
+  right: 24px;
+  left: 24px;
+  position: fixed;
+  width: calc(100vw - 48px);
+}
+
+.overlap > div:last-child {
+  margin-right: -22px;
+}

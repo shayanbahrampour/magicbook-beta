@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "reset": "rm -rf .nuxt node_modules .output package-lock.json && npm install",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@mdi/font": "^7.0.96",
+    "@nuxtjs/axios": "^5.13.6",
+    "add": "^2.0.6",
+    "firebase": "^10.4.0",
+    "nuxt": "^3.7.3",
+    "vuetify": "^3.3.16",
+    "vuex": "^4.0.2",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.62.0",
+    "vite-plugin-vuetify": "^1.0.2"
+  }
+}

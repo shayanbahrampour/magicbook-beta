@@ -1,0 +1,18 @@
+$path: '/assets/fonts';
+$font-name: 'iranSans';
+
+@mixin font-face-creator($fontName-app, $path, $fontName-path, $weight) {
+  @font-face {
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    font-family: $fontName-app;
+    src: url('#{$path}/#{$fontName-path}.eot');
+    src: url('#{$path}/#{$fontName-path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$path}/#{$fontName-path}.woff') format('woff'), url('#{$path}/#{$fontName-path}.ttf') format('truetype');
+  }
+}
+
+@include font-face-creator('proxima', '#{$path}/proxima', 'ProximaNova-Regular', normal);
+@include font-face-creator($font-name, '#{$path}/#{$font-name}', 'IRANSansWeb(FaNum)_Bold', bold);
+@include font-face-creator($font-name, '#{$path}/#{$font-name}', 'IRANSansWeb(FaNum)', normal);
