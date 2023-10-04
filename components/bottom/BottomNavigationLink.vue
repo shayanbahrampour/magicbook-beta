@@ -9,9 +9,12 @@
       exact
       flat
     >
-    <v-icon color="primary">{{ item.icon }}</v-icon>
+      <v-icon :color="'خانه' === item.title ? 'primary' : 'grey'">{{ item.icon }}</v-icon>
     </v-card>
-    <span :class="['f-11', large ? 'mt-2 font-weight-bold' : 'mt-1']">{{ item.title }}</span>
+    <span
+      :class="['f-11', large ? 'mt-2 font-weight-bold' : 'mt-1', 'خانه' === item.title ? 'text-primary' : undefined]"
+      >{{ item.title }}</span
+    >
   </div>
 </template>
 
@@ -26,6 +29,9 @@ const props = defineProps({
     default: false
   }
 });
+
+const route = useRoute();
+
 const emit = defineEmits();
 </script>
 

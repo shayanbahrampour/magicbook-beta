@@ -6,7 +6,8 @@
       :to="`/read/${item.id}`"
     >
       <div class="d-flex flex-column rtl">
-        <h4 class="f-18">{{ item.title }}</h4>
+        <h4 class="f-18 text-wrap">{{ item.title }}</h4>
+
         <h4 class="mb-2 font-weight-regular">{{ item.author }}</h4>
         <span class="f-14 mb-4" style="opacity: 0.8">{{ item.description }}</span>
         <div class="d-flex flex-wrap">

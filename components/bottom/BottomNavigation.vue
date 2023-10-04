@@ -1,6 +1,6 @@
 <template>
     <v-bottom-navigation
-      class="bottom-navigation z-6 px-4 pb-4 pt-2 start-0 end-0"
+      class="z-6 px-4 pb-4 pt-2 start-0 end-0"
       color="transparent"
       fixed
       height="80"
@@ -19,8 +19,8 @@
   <script setup>
   import BottomNavigationLink from './BottomNavigationLink.vue';
   const links = ref([
-    { title: 'خانه', path: '/home', icon: 'fas fa-house' },
     { title: 'کتابخانه', path: '/home', icon: 'fas fa-clipboard-medical' },
+    { title: 'خانه', path: '/home', icon: 'fas fa-house' },
     { title: 'پروفایل', path: '/home', icon: 'fas fa-user' }
   ]);
   </script>

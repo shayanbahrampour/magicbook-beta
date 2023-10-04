@@ -4,16 +4,20 @@
     <VFooter app bottom color="primary" class="d-flex justify-center" padless fixed>
       <VSheet class="text-center font-weight-bold w-full pb-5 bg-transparent text-white"> ساخته شده در گلیچ </VSheet>
     </VFooter>
-    <VDialog v-model="showDialog" fullscreen>
-      <AddToHomeScreen @submit="$router.push('/login')" />
-    </VDialog>
   </div>
 </template>
 
 <script setup>
-import AddToHomeScreen from './AddToHomeScreen.vue';
-const showDialog = ref(false);
+const router = useRouter();
 setTimeout(() => {
-  showDialog.value = true;
+  fetchUser();
 }, 3000);
+
+async function fetchUser() {
+  if (localStorage.getItem('token') !== 'null') {
+    router.push({ path: '/home' });
+  } else {
+    router.push({ path: '/login' });
+  }
+}
 </script>

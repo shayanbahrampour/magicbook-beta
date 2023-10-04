@@ -37,20 +37,18 @@ const creds = reactive({
   email: '',
   password: ''
 });
+const router = useRouter();
 
 const nuxtApp = useNuxtApp();
 async function registerUser() {
   try {
-    const { user } = await createUserWithEmailAndPassword(nuxtApp.$auth, creds.email, creds.password);
-    const token = user.accessToken;
-    nuxtApp.$auth.setToken(token);
-    localStorage.setItem('token', token);
-    this.$router.push('/home');
+    const { user } = await createUserWithEmailAndPassword(nuxtApp.$auth, creds.email, creds.password)
+    localStorage.setItem('token', user);
   } catch (error) {
     if (error instanceof Error) {
     }
   } finally {
-    this.$router.push('/home');
+    router.push({ path: '/home' });
   }
 }
 
@@ -58,14 +56,12 @@ async function registerUserGoogle() {
   try {
     const provider = new GoogleAuthProvider();
     const { user } = await signInWithPopup(nuxtApp.$auth, provider);
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    nuxtApp.$auth.setToken(token);
-    localStorage.setItem('token', token);
-    this.$router.push('/home');
+    localStorage.setItem('token', user);
   } catch (error) {
     if (error instanceof Error) {
     }
+  } finally {
+    router.push({ path: '/home' });
   }
 }
 </script>

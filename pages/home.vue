@@ -11,6 +11,7 @@
 import HomeBookCard from '~/components/books/HomeBookCard.vue';
 import { VSkeletonLoader } from 'vuetify/labs/VSkeletonLoader';
 
+
 const axios = useNuxtApp().$axios;
 let items = ref([]);
 let loading = ref(true);
@@ -26,6 +27,8 @@ async function fetchData() {
     console.error('Error:', error);
   }
 }
+
+
 
 fetchData();
 </script>
