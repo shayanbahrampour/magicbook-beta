@@ -5,6 +5,7 @@ const projectImage = '/logo.png';
 
 export default defineNuxtConfig({
   typescript: { shim: false },
+  ssr: false,
   css: ['vuetify/lib/styles/main.sass', '@/assets/scss/main.scss'],
   buildModules: ['@nuxtjs/pwa'],
   app: {
